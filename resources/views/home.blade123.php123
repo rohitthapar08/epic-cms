@@ -1,0 +1,25 @@
+@extends('base')
+@section('shubhkart_page_title')
+Shubh Kart
+@stop
+@section('shubhkart_content')
+    <div class="content_wrapper">
+        <?php //pr($products);?>
+        <div class="left-wrapper">
+            <div class="vnav-links">
+                <ul>
+                    @foreach($catnavigation as $key=>$value)
+                    <li><a href="{{ url('/catalog')}}/{{ $value->slug }}/">{{ $value->name }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+        <div class="mid-wrapper">
+            
+        </div>
+        <div class="right-wrapper">
+            
+        </div>
+    </div>
+@stop
+
